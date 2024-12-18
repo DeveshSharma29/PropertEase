@@ -11,7 +11,6 @@ const Forgot = () => {
     const handleChange = (e) => {
         const { value } = e.target;
         setEmail(value);
-        console.log(value);
     }
 
     const sendEmail = async (e) => {

@@ -25,7 +25,6 @@ const Single_Listing = () => {
     const navigate = useNavigate();
 
     const handleAddToFavorites = () => {
-        console.log(`function called`, email, id);
         addToFavorites(email, id);
     }
 
@@ -101,7 +100,7 @@ const Single_Listing = () => {
 
             {/* Right section: Property and Seller Details */}
             <div className='w-[45%] h-[100%] flex flex-col pl-[30px] bg-white text-xl gap-6 justify-evenly'>
-                
+
                 {/* div-1 */}
                 <div className="flex flex-col gap-1">
                     <div className="w-[95%] flex items-center justify-between">

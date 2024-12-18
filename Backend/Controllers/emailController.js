@@ -14,7 +14,6 @@ const sendEmail = (req, res) => {
 
     apiInstance.sendTransacEmail(sendSmtpEmail)
         .then((data) => {
-            console.log('Email sent successfully:', data);
             res.status(200).json({success:true,message:'Email sent successfully'});
         })
         .catch((error) => {

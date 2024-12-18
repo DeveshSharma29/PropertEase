@@ -10,7 +10,6 @@ const Filters = () => {
             ...filters,
             [name]: value,
         });
-        console.log(filters);
     };
 
     return (

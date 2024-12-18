@@ -16,12 +16,10 @@ const Profile = () => {
     })
     const handleFileChange = (event) => {
         setSelectedFile(event.target.files[0]);
-        console.log(selectedFile);
     };
     const handleChange = (e) => {
         const { name, value } = e.target;
         setUserDetails({ ...userDetails, [name]: value });
-        console.log(userDetails)
     }
 
     useEffect(() => {
@@ -41,7 +39,7 @@ const Profile = () => {
         formData.append('image', selectedFile);
         formData.append('email', email);
         for (let [key, value] of formData.entries()) {
-            console.log(key, value);
+
         }
 
 
@@ -49,7 +47,6 @@ const Profile = () => {
             const response = await axios.post('http://localhost:9090/user/setPhoto', formData);
 
             if (response.data.success) {
-                console.log(response.data.profilePhotoUrl);
                 setUser(response.data.updatedUser)
                 handleSuccess('profile photo updated');
             }

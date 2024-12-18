@@ -8,7 +8,6 @@ const Post = ({ id, url, location, bedrooms, bathrooms, area, price, category })
 
     const handlePostClick = () => {
         if (!localStorage.getItem('token')) {
-            console.log("error");
             handleError("please login to view full details");
             return;
         }

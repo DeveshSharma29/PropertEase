@@ -35,7 +35,6 @@ const Login = () => {
                 },
             });
 
-            console.log(response.data); // Check the response data
 
             const { success, message, jwtToken, user } = response.data;
 

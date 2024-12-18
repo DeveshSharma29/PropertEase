@@ -16,7 +16,6 @@ const Featured = () => {
             const response = await axios.get(
                 `http://localhost:9090/buy/featured?category=${category}&order=${order}`
             );
-            console.log(response.data);
             const { success, listings } = response.data;
             if (success) {
                 setFeatured(listings);
@@ -40,7 +39,6 @@ const Featured = () => {
 
     // Handle category switching logic
     const toggleCategory = () => {
-        console.log("hello");
         setCategory(prevCategory => prevCategory === 'selling' ? 'renting' : 'selling');
     };
 

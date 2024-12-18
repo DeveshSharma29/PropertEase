@@ -19,7 +19,6 @@ const connectDB = require('./dbConnect');
 // *** connecting to mongoDb *** //
 connectDB(URL)
     .then(() => {
-        console.log('Connected to MongoDB');
     })
     .catch((err) => {
         console.error('Error connecting to MongoDB:', err);
@@ -39,8 +38,6 @@ app.use('/password',passwordRouter);
 
 app.listen(PORT, (err) => {
     if (err) {
-        console.log("error connecting to server");
     } else {
-        console.log(`connected to server at port ${PORT}`);
     }
 })

@@ -14,7 +14,6 @@ const NavBar = () => {
     }
 
     const handleLogout = () => {
-        console.log(`User ${localStorage.getItem('loggedInUser')} successfully logged out`);
         localStorage.clear();
         navigate('/login');
     };

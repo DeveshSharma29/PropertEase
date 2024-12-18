@@ -20,10 +20,8 @@ const sendPasswordResetEmail = async (to, subject, htmlContent) => {
     try {
         const data = await apiInstance.sendTransacEmail(sendSmtpEmail);
         if (data && data.messageId) {
-            console.log('Email sent successfully:', data);
             return true; // Success
         } else {
-            console.error('Email response does not confirm success:', data);
             return false; // Failed
         }
     } catch (error) {

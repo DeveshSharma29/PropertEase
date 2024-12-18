@@ -36,7 +36,6 @@ const SignUp = () => {
         // Generate the username
         const username = `${first_name} ${last_name}`;
 
-        console.log('Payload being sent:', { username, email, password, contactNumber }); // Log the payload
 
         try {
             const url = "http://localhost:9090/auth/signup";

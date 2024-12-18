@@ -31,7 +31,6 @@ const Selling_form = () => {
         } else {
             setFormData({ ...formData, [name]: value }); // For text/number input
         }
-        console.log(formData);
     };
 
     const handleSubmit = async (e) => {
@@ -80,8 +79,6 @@ const Selling_form = () => {
                     'Authorization': `Bearer ${token}`,
                 },
             });
-
-            console.log("API response:", response.data); // Debugging line
 
             const { success, updatedListings } = response.data;
 

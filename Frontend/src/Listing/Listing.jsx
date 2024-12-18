@@ -34,7 +34,6 @@ const Listing = ({ id, url, location, bedrooms, bathrooms, area, price, category
                     email: email  // Send email in the request body
                 }
             });
-            console.log(response.data.updatedListings);
             // Update listings in the context
             setMyListings(response.data.updatedListings);
             handleSuccess('listing deleted successfully');

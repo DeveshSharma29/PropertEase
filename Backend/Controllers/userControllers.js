@@ -21,10 +21,7 @@ async function editUserData(req, res) {
         const { email } = req.query;
         const { username, contactNumber } = req.body;
 
-        console.log(email);
-        console.log(req.body);
 
-        // Find the user with the provided email
         const user = await userModel.findOne({ email });
         if (!user) {
             return res.status(404).json({ success: false, message: 'User not found' });

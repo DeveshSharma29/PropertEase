@@ -49,7 +49,6 @@ const Edit = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-        console.log("called")
         try {
             const response = await axios.put(`http://localhost:9090/buy/${id}`, currentListing, {
                 headers: {

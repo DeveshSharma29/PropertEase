@@ -76,8 +76,7 @@ async function updateListing(req, res) {
     try {
         const { id } = req.params;
         const { location, bedrooms, bathrooms, price, area, category } = req.body;
-        console.log(req.body);
-        // Find the listing by ID
+
         const listing = await listingModel.findById(id);
         if (!listing) {
             return res.status(404).json({ 
